@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="生成AIツールを目的別に比較。文章作成、調査、画像生成、仕事効率化に合うAIを見つけるためのガイド。">
+<title>AIツール比較ラボ｜目的に合うAIを見つけよう</title>
+<style>
+:root{--ink:#18263b;--muted:#5e6b7d;--brand:#5846d8;--mint:#bff4df;--paper:#f7f8fc;--line:#e3e6ef;--white:#fff;--yellow:#d9d4ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;color:var(--ink);line-height:1.85;background:var(--paper)}a{color:var(--brand)}.wrap{width:min(1080px,90%);margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.nav{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0}.logo{font-weight:800;text-decoration:none;color:var(--ink);font-size:1.15rem;letter-spacing:.07em}.navlinks{display:flex;gap:25px;flex-wrap:wrap}.navlinks a{text-decoration:none;font-size:.87rem;font-weight:650;color:var(--ink)}
+.hero{padding:95px 0 88px;background:linear-gradient(115deg,#e6e4ff,#eefbf6 75%,#eefbf6);border-bottom:1px solid var(--line)}.eyebrow{font-size:.73rem;letter-spacing:.2em;font-weight:800;color:#5846d8}h1{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2.1rem,5vw,3.8rem);line-height:1.45;max-width:800px;margin:20px 0 22px;letter-spacing:-.03em;font-weight:700}.hero p{max-width:650px;color:#46536b;font-size:1.03rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-block;padding:12px 22px;border-radius:3px;background:var(--brand);color:#fff;text-decoration:none;font-weight:750}.btn.secondary{background:transparent;color:var(--brand);border:1px solid #d1cdf8}
+.hero-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:33px}.chip{border:1px solid #dcd9f6;background:transparent;border-radius:2px;padding:5px 11px;font-size:.8rem;font-weight:650}
+section{padding:72px 0}.section-head{max-width:740px;margin-bottom:32px}.section-head h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(1.55rem,3vw,2.25rem);line-height:1.45;margin:0 0 12px;letter-spacing:-.02em}.section-head p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:2px;padding:27px;box-shadow:none}.tag{display:inline-block;background:transparent;color:#5846d8;border-bottom:1px solid #c7c1f8;border-radius:0;padding:2px 0;font-size:.72rem;letter-spacing:.08em;font-weight:800}.card h3{font-size:1.15rem;line-height:1.5;margin:14px 0 10px}.card p{color:var(--muted);font-size:.94rem}.text-link{font-weight:750;text-decoration:none;border-bottom:1px solid currentColor}.iconbox{width:46px;height:46px;display:grid;place-items:center;border-radius:2px;background:#eeecff;color:#5846d8;font-family:Georgia,serif;font-size:1.3rem;margin-bottom:16px}
+.compare{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}.compare th,.compare td{text-align:left;padding:17px;border-bottom:1px solid var(--line);vertical-align:top}.compare th{background:#f0efff;font-size:.87rem}.compare td{font-size:.92rem}.compare tr:last-child td{border-bottom:0}.label{font-size:.8rem;font-weight:800;color:var(--brand)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:25px;border-radius:2px;background:#fff;border:1px solid var(--line)}.step:before{content:attr(data-step);font-size:.77rem;font-weight:850;color:var(--brand);letter-spacing:.08em}.step h3{margin:9px 0}.notice{background:#f0efff;border-left:3px solid #9589ea;padding:20px;color:#39365b;font-size:.92rem}.faq details{background:#fff;border:1px solid var(--line);border-radius:2px;padding:17px 20px;margin:10px 0}.faq summary{font-weight:750;cursor:pointer}.faq p{color:var(--muted);margin-bottom:0}.cta{background:#242044;color:#fff;border-radius:2px;padding:38px}.cta p{color:#e1dff8}.cta .btn{background:#c8f0df;color:#242044}footer{background:#fff;border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.86rem}.footlinks{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px}.footlinks a{color:var(--muted)}
+@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}.grid,.steps{grid-template-columns:1fr}.hero{padding:55px 0}.navlinks{gap:14px}.table-wrap{overflow-x:auto}.compare{min-width:650px}}
+</style>
+<style>
+.compare-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px}.compare-controls label{font-size:.88rem;font-weight:750}.compare-controls input,.compare-controls select{padding:11px 12px;border:1px solid #cfcde8;border-radius:3px;background:white;font:inherit;min-width:170px}.compare-controls button,.comparison-heading button{padding:10px 13px;border:1px solid #b8b2e5;background:white;color:#5846d8;cursor:pointer;font:inherit;border-radius:3px}.ai-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.ai-item{background:white;border:1px solid #e3e6ef;padding:22px}.ai-item h3{margin:0 0 8px;font-size:1.2rem}.ai-item p{color:#5e6b7d;font-size:.91rem}.ai-item .pill{display:inline-block;font-size:.75rem;background:#f0efff;padding:2px 9px;margin:3px 5px 3px 0}.ai-item label{display:flex;align-items:center;gap:9px;margin:16px 0;font-weight:750;cursor:pointer}.ai-item input{accent-color:#5846d8;width:17px;height:17px}.ai-item a{font-weight:750}.comparison-panel{background:white;border:1px solid #e3e6ef;padding:24px;margin-top:26px}.comparison-heading{display:flex;justify-content:space-between;gap:12px;align-items:center}.comparison-heading h3{margin:0}.small-note{font-size:.8rem;color:#5e6b7d;margin-top:18px}#result-count,#compare-hint{color:#5e6b7d;font-size:.9rem}#selected-table th{min-width:120px}#selected-table td{min-width:170px}@media(max-width:850px){.ai-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:550px){.ai-grid{grid-template-columns:1fr}.compare-controls{align-items:stretch;flex-direction:column}.compare-controls input,.compare-controls select{width:100%}}
+</style><style>
+.legal-section{padding:55px 0;border-top:1px solid #e3e6ef;scroll-margin-top:100px}
+.legal-section:nth-of-type(even){background:#f7f8fc}
+.policy{max-width:850px;background:white;padding:30px;border:1px solid #e3e6ef}
+.policy h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:1.3rem;margin:30px 0 10px}
+.policy h2:first-child{margin-top:0}
+.policy p{line-height:1.9;color:#4f596a}
+
+.policy-note{padding:16px;background:#f0efff;border-left:3px solid #5846d8}
+@media(max-width:760px){.policy{padding:20px}}
+</style></head>
+<body id="top">
+<header><div class="wrap nav"><a class="logo" href="#">AIツール比較ラボ</a><nav class="navlinks" aria-label="メインメニュー"><a href="#categories">目的から探す</a><a href="#compare">比較表</a><a href="#howto">選び方</a><a href="#faq">FAQ</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap"><div class="eyebrow">FIND YOUR BEST AI TOOL</div><h1>あなたに合うAI、<br>比較して見つけよう。</h1><p>文章作成、調べもの、画像生成、仕事の効率化。AIツールの特徴や選ぶときのポイントを整理して、自分の目的に合うサービスを見つけるための比較ガイドです。</p><div class="actions"><a class="btn" href="#compare">比較表を見る ↓</a><a class="btn secondary" href="#categories">目的から探す</a></div><div class="pills"><span class="pill">初心者向け</span><span class="pill">目的別ガイド</span><span class="pill">料金・機能を確認</span></div></div></section>
+<section id="categories"><div class="wrap"><div class="section-head"><h2>何に使いたい？目的から探す</h2><p>AIは「有名だから」ではなく、使いたい場面に合わせて選ぶのがコツです。</p></div><div class="grid">
+<article class="card"><div class="feature">✍️</div><span class="tag">文章・相談</span><h3>文章作成・アイデア出し</h3><p>メール、記事の下書き、要約、ブレインストーミングなどに使うAIを比較。</p><a class="text-link" href="#compare">候補を比較する →</a></article>
+<article class="card"><div class="feature">🔎</div><span class="tag">検索・リサーチ</span><h3>調べもの・情報整理</h3><p>出典を確認しながら調査したいときに、検索機能や引用表示をチェック。</p><a class="text-link" href="#compare">候補を比較する →</a></article>
+<article class="card"><div class="feature">🎨</div><span class="tag">画像・デザイン</span><h3>画像生成・クリエイティブ</h3><p>イラスト、広告素材、アイデアの可視化など、画像系AIの用途を整理。</p><a class="text-link" href="#compare">候補を比較する →</a></article>
+<article class="card"><div class="feature">💻</div><span class="tag">開発</span><h3>プログラミング支援</h3><p>コードの説明、エラー調査、補完など、開発作業との相性を確認。</p><a class="text-link" href="#compare">候補を比較する →</a></article>
+<article class="card"><div class="feature">📚</div><span class="tag">学習</span><h3>勉強・語学・理解補助</h3><p>難しい内容の説明、練習問題、語学学習などに使うときの選び方。</p><a class="text-link" href="#compare">候補を比較する →</a></article>
+<article class="card"><div class="feature">⚙️</div><span class="tag">業務効率化</span><h3>資料・日々の仕事</h3><p>会議メモ、資料のたたき台、定型作業の効率化に役立つ機能を比較。</p><a class="text-link" href="#compare">候補を比較する →</a></article>
+</div></div></section>
+<section id="compare" style="background:#efeffa"><div class="wrap">
+<div class="section-head"><h2>AIツールを比較する</h2><p>目的で絞り込み、気になるサービスを最大3つ選んで横並びで比較できます。料金・提供機能は変更されるため、公式サイトで最新情報をご確認ください。</p></div>
+<div class="compare-controls">
+<label for="ai-search">サービス名で検索</label><input id="ai-search" type="search" placeholder="例：ChatGPT">
+<label for="ai-purpose">利用目的</label><select id="ai-purpose"><option value="all">すべて表示</option><option value="writing">文章作成・要約</option><option value="research">調査・情報収集</option><option value="image">画像生成</option><option value="work">仕事の効率化</option></select>
+<button id="reset-filters" type="button">条件をリセット</button>
+</div>
+<p id="result-count" aria-live="polite"></p>
+<div id="ai-cards" class="ai-grid"></div>
+<div class="comparison-panel"><div class="comparison-heading"><h3>選んだAIを比較</h3><button type="button" id="clear-selection">選択を解除</button></div><p id="compare-hint" aria-live="polite">2〜3つ選ぶと違いが見やすくなります。</p><div class="table-wrap"><table class="compare" id="selected-table"><tbody></tbody></table></div></div>
+<p class="small-note">※機能は一般的な利用例であり、プランや地域によって異なります。掲載順はランキングではありません。公式サイトへのリンクは現時点では広告リンクではありません。</p>
+</div></section>
+<section id="howto"><div class="wrap"><div class="section-head"><h2>失敗しにくいAIの選び方</h2><p>まずは無料で試せる範囲と、自分の作業に必要な機能を確認しましょう。</p></div><div class="steps"><div class="step"><div class="num">ステップ 01</div><h3>用途をひとつ決める</h3><p>例：仕事のメールを整える、情報を調べる、画像を作る。目的が明確だと比較しやすくなります。</p></div><div class="step"><div class="num">ステップ 02</div><h3>同じ課題で試す</h3><p>同じ指示や素材を使って試し、正確さ、使いやすさ、修正のしやすさを比べましょう。</p></div><div class="step"><div class="num">ステップ 03</div><h3>料金とプライバシーを確認</h3><p>無料枠、上限、データの取り扱い、商用利用条件を公式情報で確認してから使いましょう。</p></div></div></div></section>
+<section id="books" style="padding:64px 0;background:#f6f4fb"><div class="wrap"><div class="section-head"><h2>AI初心者におすすめの書籍</h2><p>AIの使い方をもっと学びたい方に向けた関連書籍をご紹介します。</p></div><p style="font-size:13px;font-weight:700;letter-spacing:.08em;margin:0 0 18px">PR・広告（楽天アフィリエイト）</p><article style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;padding:24px;background:white;border:1px solid #e4dfed;border-radius:12px;max-width:780px"><a href="https://hb.afl.rakuten.co.jp/ichiba/58d8b14e.3daeed17.58d8b14f.a519ca25/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18106176%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener noreferrer" style="display:block;flex:0 0 180px;max-width:100%"><img src="https://hbb.afl.rakuten.co.jp/hgb/58d8b14e.3daeed17.58d8b14f.a519ca25/?me_id=1213310&item_id=21494233&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F1873%2F9784046071873_1_77.jpg%3F_ex%3D240x240&s=240x240&t=picttext" alt="2ヶ月で月30万円を実現する 超初心者でも稼げるAI活用法 の書影" style="width:180px;max-width:100%;height:auto;display:block"></a><div style="flex:1 1 260px"><p style="font-size:12px;color:#655d74;margin:0 0 8px">AI活用・入門書</p><h3 style="margin:0 0 10px;font-size:20px;line-height:1.5">2ヶ月で月30万円を実現する 超初心者でも稼げるAI活用法</h3><p style="margin:0 0 8px">著者：あべ むつき</p><p style="font-size:13px;margin:0 0 16px">※書名に含まれる収益額は成果を保証するものではありません。価格・在庫は楽天の販売ページでご確認ください。</p><a class="btn" href="https://hb.afl.rakuten.co.jp/ichiba/58d8b14e.3daeed17.58d8b14f.a519ca25/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18106176%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener noreferrer">楽天で商品を見る</a></div></article></div></section>
+<section id="faq"><div class="wrap"><div class="section-head"><h2>よくある質問</h2></div><div class="faq"><details><summary>無料で使えるAIはありますか？</summary><p>無料で利用できるプランや試用枠を提供するサービスがあります。ただし、回数や機能に制限がある場合があり、条件は変更されることもあります。各公式サイトで確認してください。</p></details><details><summary>一番おすすめのAIはどれですか？</summary><p>用途によって異なります。文章作成、調査、画像生成、プログラミングなど、まず目的を決めて同じ課題で試すのがおすすめです。</p></details><details><summary>AIの回答はそのまま信じてよいですか？</summary><p>いいえ。誤りや古い情報が含まれる場合があります。重要な内容は一次情報や公式資料で確認し、個人情報や機密情報の入力にも注意してください。</p></details><details><summary>このサイトは広告を掲載しますか？</summary><p>楽天アフィリエイト広告を掲載しており、広告であることを明示しています。広告リンクにはアフィリエイトリンクが含まれます。</p></details></div></div></section>
+<section><div class="wrap"><div class="cta"><h2 style="margin-top:0">自分の使い方に合うAIを見つけよう。</h2><p>目的・機能・料金・データの取り扱いを比べて、納得できるツールを選びましょう。</p><a class="btn" href="#compare">比較表に戻る</a></div></div></section>
+<section id="about" class="legal-section"><div class="wrap"><div class="section-head"><h2>運営者情報</h2></div><article class="policy">
+<h2>サイト概要</h2>
+<p><strong>サイト名：</strong>AIえらびナビ</p>
+<p><strong>運営者表示名：</strong>AIえらびナビ</p>
+<p><strong>サイトURL：</strong><a href="https://kskeyama37-glitch.github.io/ai-erabi-navi/">https://kskeyama37-glitch.github.io/ai-erabi-navi/</a></p>
+<p><strong>運営開始日：</strong>2026年10月26日</p>
+<h2>運営目的</h2><p>AIツールを初めて利用する方や、仕事・学習で活用したい方に向けて、各サービスの特徴、用途、比較時の注意点をわかりやすく紹介します。</p>
+<h2>掲載情報について</h2><p>料金・機能・提供条件は変更されることがあります。最終的な申込みや契約の判断は各サービスの公式サイトをご確認ください。</p>
+<p class="policy-note">運営者表示名としてサイト名を掲載しています。事業形態や販売・取引の内容によっては、法令上、別途氏名・住所等の表示が必要となる場合があります。</p>
+</article><p><a href="#top">↑ ページ上部へ戻る</a></p></div></section>
+<section id="privacy" class="legal-section"><div class="wrap"><div class="section-head"><h2>プライバシーポリシー</h2></div><article class="policy">
+<h2>1. 基本方針</h2><p>AIえらびナビ（以下「当サイト」）は、利用者の個人情報の保護に配慮し、取得した情報を適切に取り扱います。</p>
+<h2>2. 取得する情報</h2><p>当サイトには、氏名やメールアドレスを入力して送信するフォームは設置していません。外部サービスへのリンクを利用した際の情報の取り扱いについては、各サービスのプライバシーポリシーをご確認ください。</p>
+<h2>3. サイト利用時の情報</h2><p>当サイトはGitHub Pages上で公開されています。サイトへのアクセスに伴う技術的な情報の取り扱いについては、ホスティング事業者のプライバシーに関する案内をご確認ください。</p>
+<h2>4. Cookie等</h2><p>当サイトに掲載する楽天アフィリエイトの広告リンクや外部サイトでは、リンク先の事業者がCookie等を使用する場合があります。詳細は各事業者の案内をご確認ください。</p>
+<h2>5. 広告配信・アフィリエイト</h2><p>当サイトでは、楽天アフィリエイトの広告を掲載しています。広告のクリック等に伴い、広告事業者がCookie等を使用する場合があります。<strong>利用する広告事業者：</strong>楽天アフィリエイト。</p>
+<h2>6. 第三者提供・安全管理</h2><p>法令に基づく場合などを除き、個人情報を本人の同意なく第三者に提供しないよう取り扱います。取得情報について、適切な安全管理に努めます。</p>
+<h2>7. 改定</h2><p>本ポリシーは必要に応じて改定します。最終更新日：2026年10月26日</p>
+
+</article><p><a href="#top">↑ ページ上部へ戻る</a></p></div></section>
+<section id="advertising" class="legal-section"><div class="wrap"><div class="section-head"><h2>広告について</h2></div><article class="policy">
+<h2>広告掲載について</h2><p>当サイトは、楽天アフィリエイトの広告を掲載しています。掲載する広告リンクには、成果に応じた報酬が発生するアフィリエイトリンクが含まれます。</p>
+<h2>広告の明示</h2><p>広告を含むページでは、読者が広告であると認識できるよう、ページ内のわかりやすい位置に「広告」「PR」などの表示を行います。</p>
+<h2>比較・紹介の方針</h2><p>各サービスの特徴や注意点を整理し、比較の根拠をできるだけ明確にすることを目指します。広告提携の有無が、機能・料金等の事実に関する説明を変更するものではありません。</p>
+<h2>掲載している広告サービス</h2><p>楽天アフィリエイト</p>
+<h2>広告リンクに関する注意</h2><p>リンク先のサービスは外部事業者が提供します。料金、契約、解約、返金などは各事業者の条件をご確認ください。</p>
+
+</article><p><a href="#top">↑ ページ上部へ戻る</a></p></div></section>
+<section id="disclaimer" class="legal-section"><div class="wrap"><div class="section-head"><h2>免責事項</h2></div><article class="policy">
+<h2>掲載情報の正確性</h2><p>当サイトでは可能な限り正確な情報を掲載するよう努めますが、内容の正確性、完全性、最新性を保証するものではありません。</p>
+<h2>料金・機能・利用条件</h2><p>AIサービスの料金、機能、利用制限、提供地域、商用利用条件などは予告なく変更される場合があります。利用前に必ず公式サイトと利用規約をご確認ください。</p>
+<h2>外部リンク</h2><p>当サイトから移動した外部サイトの内容やサービスについて、当サイトが管理するものではありません。契約・購入・利用に関する判断はご自身で行ってください。</p>
+<h2>AIによる生成物について</h2><p>AIが出力した文章や画像には誤り、不適切な内容、権利上の問題が含まれる可能性があります。重要な用途では内容を検証し、必要に応じて専門家にご相談ください。</p>
+<h2>責任について</h2><p>当サイトの利用に関連して生じた損害については、適用法令に従って対応します。本記載は、法令上免責が認められない責任を除外する趣旨ではありません。</p>
+<h2>著作権等</h2><p>当サイト内の文章・デザイン等の権利は、当サイトまたは正当な権利者に帰属します。各AIサービス名・商標はそれぞれの権利者に帰属します。</p>
+<p>最終更新日：2026年10月26日</p>
+</article><p><a href="#top">↑ ページ上部へ戻る</a></p></div></section></main>
+<footer><div class="wrap"><div class="footlinks"><a href="#about">運営者情報</a><a href="#privacy">プライバシーポリシー</a><a href="#advertising">広告について</a><a href="#disclaimer">免責事項</a></div><p>※広告掲載時は記事内にも「広告」「PR」等を明瞭に表示します。掲載内容や利用条件は各公式サイトでご確認ください。</p><p>© 2026 AIえらびナビ</p></div></footer>
+<script>
+(() => {
+const tools=[
+{name:"ChatGPT",purpose:["writing","research","image","work"],type:"総合AI",desc:"文章作成、要約、相談、画像生成など幅広い作業に。",strength:"幅広い用途を1つのサービスで試しやすい",check:"利用上限・モデル・プラン別機能",url:"https://chatgpt.com/"},
+{name:"Claude",purpose:["writing","work"],type:"文章・文書AI",desc:"長文の整理、文章の推敲、文書を使った作業に。",strength:"長文の読解・文章作成",check:"ファイル対応・利用制限・プラン",url:"https://claude.ai/"},
+{name:"Google Gemini",purpose:["writing","research","image","work"],type:"総合AI",desc:"文章作成、調査、Googleサービスとの連携などに。",strength:"Google関連サービスとの連携",check:"地域・プラン・連携対象",url:"https://gemini.google.com/"},
+{name:"Perplexity",purpose:["research","writing"],type:"検索・調査AI",desc:"ウェブ検索を利用した情報収集や出典の確認に。",strength:"調査と参照元の探索",check:"参照元の信頼性・検索制限",url:"https://www.perplexity.ai/"},
+{name:"Adobe Firefly",purpose:["image"],type:"画像生成AI",desc:"画像生成やデザイン素材の制作補助に。",strength:"クリエイティブ制作",check:"商用利用条件・クレジット・プラン",url:"https://firefly.adobe.com/"}
+];
+const selected=new Set();
+const cards=document.getElementById("ai-cards");
+const table=document.querySelector("#selected-table tbody");
+const count=document.getElementById("result-count");
+const hint=document.getElementById("compare-hint");
+const search=document.getElementById("ai-search");
+const purpose=document.getElementById("ai-purpose");
+function render(){
+const q=search.value.trim().toLocaleLowerCase();
+const shown=tools.filter(t=>(purpose.value==="all"||t.purpose.includes(purpose.value))&&(t.name.toLocaleLowerCase().includes(q)||t.desc.toLocaleLowerCase().includes(q)));
+count.textContent=`${shown.length}件のサービスを表示中 / ${selected.size}件選択中（最大3件）`;
+cards.replaceChildren();
+shown.forEach(t=>{
+const card=document.createElement("article");card.className="ai-item";
+const title=document.createElement("h3");title.textContent=t.name;card.append(title);
+const tag=document.createElement("span");tag.className="pill";tag.textContent=t.type;card.append(tag);
+const desc=document.createElement("p");desc.textContent=t.desc;card.append(desc);
+const label=document.createElement("label");const box=document.createElement("input");box.type="checkbox";box.checked=selected.has(t.name);box.disabled=!box.checked&&selected.size>=3;box.addEventListener("change",()=>{box.checked?selected.add(t.name):selected.delete(t.name);render()});label.append(box,document.createTextNode("比較に追加"));card.append(label);
+const a=document.createElement("a");a.href=t.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent="公式サイトを見る →";card.append(a);cards.append(card);
+});
+table.replaceChildren();
+const chosen=tools.filter(t=>selected.has(t.name));
+hint.textContent=chosen.length<2?"2〜3つ選ぶと違いが見やすくなります。":`${chosen.length}つのAIを比較しています。`;
+if(!chosen.length){const tr=document.createElement("tr");const td=document.createElement("td");td.textContent="上のカードから比較したいAIを選んでください。";tr.append(td);table.append(tr);return;}
+const rows=[["サービス名",t=>t.name],["主な用途",t=>t.desc],["特徴の目安",t=>t.strength],["確認ポイント",t=>t.check]];
+rows.forEach(([label,get])=>{const tr=document.createElement("tr");const th=document.createElement("th");th.scope="row";th.textContent=label;tr.append(th);chosen.forEach(t=>{const td=document.createElement("td");td.textContent=get(t);tr.append(td)});table.append(tr)});
+const tr=document.createElement("tr");const th=document.createElement("th");th.textContent="公式サイト";tr.append(th);chosen.forEach(t=>{const td=document.createElement("td"),a=document.createElement("a");a.href=t.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent="公式サイト";td.append(a);tr.append(td)});table.append(tr);
+}
+search.addEventListener("input",render);purpose.addEventListener("change",render);
+document.getElementById("reset-filters").addEventListener("click",()=>{search.value="";purpose.value="all";render()});
+document.getElementById("clear-selection").addEventListener("click",()=>{selected.clear();render()});
+render();
+})();
+</script></body></html>
